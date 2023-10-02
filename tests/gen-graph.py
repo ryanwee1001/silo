@@ -94,11 +94,29 @@ res_oct_y = [
     24.9462280,
 ]
 
-res_throughput_x = [600, 900, 1000]
-res_throughput_y = [59875.10, 59208.68, 58854.55]
+res_throughput_x = [10, 20, 30, 60, 100, 600, 900, 1000]
+res_throughput_y = [
+    65299.70, 
+    62892.34,
+    61881.52,
+    60528.42,
+    61193.30,
+    59875.10, 
+    59208.68, 
+    58854.55,
+]
 
-res_latency_x = [600, 900, 1000]
-res_latency_y = [16.68464, 16.86774, 16.96458]
+res_latency_x = [10, 20, 30, 60, 100, 600, 900, 1000]
+res_latency_y = [
+    15.28042,
+    15.87654,
+    16.14138,
+    16.50482,
+    16.33013,
+    16.68464, 
+    16.86774, 
+    16.96458,
+]
 
 ### LINEAR FITTING ###
 
@@ -182,8 +200,8 @@ def plot(
 # coef = np.polyfit(res_throughput_x, res_throughput_y, 1)
 # fn = np.poly1d(coef)
 # plt.plot(res_throughput_x, fn(res_throughput_x), color="black", label=f"threads1scale1")
-# plt.xlim(500, 1000)
-# plt.ylim(57000, 61000)
+# plt.xlim(0, 1000)
+# plt.ylim(57000, 66000)
 # plt.xlabel("Runtime (sec)")
 # plt.ylabel("Throughput (ops/sec)")
 # plt.title(label="Throughput (number threads 1, scale factor 1)")
@@ -193,8 +211,8 @@ def plot(
 # coef = np.polyfit(res_latency_x, res_latency_y, 1)
 # fn = np.poly1d(coef)
 # plt.plot(res_latency_x, fn(res_latency_x), color="black", label=f"threads1scale1")
-# plt.xlim(500, 1000)
-# plt.ylim(16, 17)
+# plt.xlim(0, 1000)
+# plt.ylim(15, 17)
 # plt.xlabel("Runtime (sec)")
 # plt.ylabel("Latency (microsec)")
 # plt.title(label="Latency (number threads 1, scale factor 1)")
